@@ -1,0 +1,23 @@
+[{
+  "language": "Bokmål",
+  "i18n": "nb",
+  "ns": "taxes-taxjar",
+  "translation": {
+    "reaction-taxes": {
+      "admin": {
+        "shortcut": {
+          "taxjarLabel": "Tarjar",
+          "taxjarTitle": "Tarjar"
+        },
+        "dashboard": {
+          "taxjarLabel": "Tarjar",
+          "taxjarTitle": "Tarjar"
+        },
+        "taxSettings": {
+          "taxjarLabel": "Tarjar",
+          "taxjarSettingsLabel": "TaxJar"
+        }
+      }
+    }
+  }
+}]

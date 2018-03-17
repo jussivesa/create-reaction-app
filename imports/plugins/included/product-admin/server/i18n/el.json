@@ -1,0 +1,18 @@
+[{
+  "i18n": "el",
+  "ns": "reaction-product-admin",
+  "translation": {
+    "reaction-product-admin": {
+      "admin": {
+        "settings": {
+          "productSettingsLabel": "Ρυθμίσεις προϊόντος",
+          "productDetailsLabel": "λεπτομέρειες προιόντος"
+        }
+      },
+      "productDetailEdit": {
+        "template": "πρότυπο Ρυθμίσεις",
+        "templateSelectPlaceholder": "Επιλέξτε ένα πρότυπο"
+      }
+    }
+  }
+}]

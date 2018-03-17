@@ -1,0 +1,18 @@
+[{
+  "i18n": "ru",
+  "ns": "reaction-product-admin",
+  "translation": {
+    "reaction-product-admin": {
+      "admin": {
+        "settings": {
+          "productSettingsLabel": "Настройки продукта",
+          "productDetailsLabel": "информация о продукте"
+        }
+      },
+      "productDetailEdit": {
+        "template": "Настройки шаблона",
+        "templateSelectPlaceholder": "Выберите шаблон"
+      }
+    }
+  }
+}]

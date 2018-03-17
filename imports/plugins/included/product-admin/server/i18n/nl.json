@@ -1,0 +1,18 @@
+[{
+  "i18n": "nl",
+  "ns": "reaction-product-admin",
+  "translation": {
+    "reaction-product-admin": {
+      "admin": {
+        "settings": {
+          "productSettingsLabel": "productinstellingen",
+          "productDetailsLabel": "Productdetails"
+        }
+      },
+      "productDetailEdit": {
+        "template": "sjabloon Settings",
+        "templateSelectPlaceholder": "Selecteer een template"
+      }
+    }
+  }
+}]

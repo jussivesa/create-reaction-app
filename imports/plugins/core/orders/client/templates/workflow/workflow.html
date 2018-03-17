@@ -1,0 +1,13 @@
+<template name="coreOrderWorkflow">
+  <div aria-multiselectable="true" class="panel-group" id="core-order-workflow-accordion" role="tablist">
+    {{#with order}}
+      {{#each shipment in shipping}}
+        <div class="panel {{#if isCompleted}} panel-success {{else}} panel-info {{/if}}">
+          {{#each reactionTemplate workflow="coreOrderShipmentWorkflow"}}
+            {{> Template.dynamic template=template data=(orderFulfillmentData ../_id shipment) }}
+          {{/each}}
+        </div>
+      {{/each}}
+    {{/with}}
+  </div>
+</template>

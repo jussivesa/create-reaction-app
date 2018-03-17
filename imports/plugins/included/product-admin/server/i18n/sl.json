@@ -1,0 +1,18 @@
+[{
+  "i18n": "sl",
+  "ns": "reaction-product-admin",
+  "translation": {
+    "reaction-product-admin": {
+      "admin": {
+        "settings": {
+          "productSettingsLabel": "Nastavitve izdelka",
+          "productDetailsLabel": "Podrobnosti produkta"
+        }
+      },
+      "productDetailEdit": {
+        "template": "Nastavitve predloge",
+        "templateSelectPlaceholder": "Izberite predlogo"
+      }
+    }
+  }
+}]

@@ -1,0 +1,18 @@
+[{
+  "i18n": "ar",
+  "ns": "reaction-product-admin",
+  "translation": {
+    "reaction-product-admin": {
+      "admin": {
+        "settings": {
+          "productSettingsLabel": "إعدادات المنتج",
+          "productDetailsLabel": "تفاصيل المنتج"
+        }
+      },
+      "productDetailEdit": {
+        "template": "إعدادات قالب",
+        "templateSelectPlaceholder": "حدد قالب"
+      }
+    }
+  }
+}]
