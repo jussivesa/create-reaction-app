@@ -1,22 +1,22 @@
 {
-  "name": "reaction",
-  "description": "Reaction is a modern reactive, real-time event driven ecommerce platform.",
-  "version": "1.9.0",
+  "name": "create-reaction-app",
+  "description": "Reaction Commerce made easy: Dev, Add Markets & Products, Customize to fit your Brand and Deploy with one script.",
+  "version": "0.0.1",
   "main": "main.js",
   "directories": {
     "test": "tests"
   },
-  "homepage": "https://github.com/reactioncommerce/reaction",
-  "url": "https://github.com/reactioncommerce/reaction",
-  "email": "reaction@reactioncommerce.com",
+  "homepage": "https://vesa.co",
+  "url": "https://github.com/jussivesa/create-reaction-app",
+  "email": "hello@vesa.co",
   "repository": {
     "type": "git",
-    "url": "https://github.com/reactioncommerce/reaction.git"
+    "url": "https://github.com/jussivesa/create-reaction-app.git"
   },
-  "author": "Reaction Commerce <hello@reactioncommerce.com>",
+  "author": "Jussi Vesa <hello@vesa.co>",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/reactioncommerce/reaction/issues"
+    "url": "https://github.com/jussivesa/create-reaction-app/issues"
   },
   "dependencies": {
     "@babel/runtime": "7.0.0-beta.38",
