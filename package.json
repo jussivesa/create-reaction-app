@@ -165,7 +165,7 @@
     "lint": "eslint .",
     "test": "jest",
     "docs": "jsdoc . --configure .reaction/jsdoc/jsdoc.json --readme .reaction/jsdoc/templates/static/README.md",
-    "deploy": "curl https://github.com/jussivesa/reaction-scripts/deploy-sh.sh | bash -s -- arg1 arg2"
+    "deploy": "curl https://raw.githubusercontent.com/jussivesa/reaction-scripts/master/deploy-sh.sh | bash -s -- arg1 arg2"
   },
   "babel": {
     "plugins": [
