@@ -1,7 +1,7 @@
 {
-  "name": "create-reaction-app",
+  "name": "reaction",
   "description": "Reaction Commerce made easy: Dev, Add Markets & Products, Customize to fit your Brand and Deploy with one script.",
-  "version": "0.0.1",
+  "version": "1.10.0",
   "main": "main.js",
   "directories": {
     "test": "tests"
@@ -107,6 +107,7 @@
     "react-taco-table": "^0.5.1",
     "react-tether": "^0.6.1",
     "react-textarea-autosize": "^5.2.1",
+    "reaction-cli": "^0.29.0",
     "recompose": "^0.26.0",
     "shallowequal": "^1.0.2",
     "sharp": "^0.19.0",
