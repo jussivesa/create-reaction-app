@@ -1,5 +1,16 @@
 # create-reaction-app - Reaction Commerce made easy
 
+## Version
+Currently uses Reaction Commerce version 1.1.10. Reaction --version output
+`
+$ reaction --version
+Node: 9.8.0
+NPM: 5.7.1
+Meteor Node: 8.9.4
+Meteor NPM: 5.6.0
+Reaction CLI: 0.29.0
+`
+
 ## Status
 This package is still in development, and the repository is private for a while. When published as public, this package will contain new base theme for Reaction Commerce, with automation scripts to setup env's and to publish the app to self-hosted servers.
 
