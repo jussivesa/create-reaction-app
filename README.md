@@ -1,3 +1,23 @@
+# create-reaction-app
+
+## Dev
+You may want to test the local dev-build with multiple devices. I would recommend great tool called `ngrok` to tunnel the `localhost:port` site as public address to be accessible from tablet, phone or another device.
+
+After downloading `ngrok`, use terminal to locate the `ngrok` executable and run command:
+
+`./ngrok authtoken YOUR_TOKEN_HERE` where token is from ngrok website.
+
+and to tunnel
+
+`./ngrok http YOUR_PORT_HERE` where port is the port of where `create-reaction-app` is running, typically port 3000.
+
+## Build
+
+## Contribute
+
+
+
+
 # Reaction Commerce
 
 [![Circle CI](https://circleci.com/gh/reactioncommerce/reaction.svg?style=svg)](https://circleci.com/gh/reactioncommerce/reaction) [![Gitter](https://badges.gitter.im/JoinChat.svg)](https://gitter.im/reactioncommerce/reaction?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
