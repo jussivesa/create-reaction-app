@@ -1,4 +1,7 @@
-# create-reaction-app
+# create-reaction-app - Reaction Commerce made easy
+
+## Status
+This package is still in development, and the repository is private for a while. When published as public, this package will contain new base theme for Reaction Commerce, with automation scripts to setup env's and to publish the app to self-hosted servers.
 
 ## Dev
 You may want to test the local dev-build with multiple devices. I would recommend great tool called `ngrok` to tunnel the `localhost:port` site as public address to be accessible from tablet, phone or another device.
@@ -12,13 +15,14 @@ and to tunnel
 `./ngrok http YOUR_PORT_HERE` where port is the port of where `create-reaction-app` is running, typically port 3000.
 
 ## Build
+Todo
 
 ## Contribute
+Any contributions are greatly appreciated. However, all pull request for the main Reaction Commerce should be made to the main Reaction Commerce repository at [GitHub](https://github.com/reactioncommerce/reaction). Besides that, pull requests for files listed in directory `imports/plugins/custom/create-reaction-app` are most welcomed to be made to this repo.
 
 
 
-
-# Reaction Commerce
+# Reaction Commerce Docs from Reaction repository
 
 [![Circle CI](https://circleci.com/gh/reactioncommerce/reaction.svg?style=svg)](https://circleci.com/gh/reactioncommerce/reaction) [![Gitter](https://badges.gitter.im/JoinChat.svg)](https://gitter.im/reactioncommerce/reaction?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Open Source Helpers](https://www.codetriage.com/reactioncommerce/reaction/badges/users.svg)](https://www.codetriage.com/reactioncommerce/reaction)
