@@ -1,3 +1,6 @@
+# enviorement secrets
+.env
+
 .DS_Store
 .fileStorage/
 .vscode
