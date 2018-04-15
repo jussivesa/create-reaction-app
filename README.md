@@ -2,17 +2,75 @@
 
 ## Version
 Currently uses Reaction Commerce version 1.1.10. Reaction --version output
-`
+```
 $ reaction --version
 Node: 9.8.0
 NPM: 5.7.1
 Meteor Node: 8.9.4
 Meteor NPM: 5.6.0
 Reaction CLI: 0.29.0
-`
+```
 
 ## Status
 This package is still in development, and the repository is private for a while. When published as public, this package will contain new base theme for Reaction Commerce, with automation scripts to setup env's and to publish the app to self-hosted servers.
+
+## Before you get started
+To run the scripts listed in `.create-reaction-app` -folder, you must generate or have existing SHH key for your machine to gain access to the remote server without password you wish to publish the create-reaction-app project. If you got stuck in any of these following steps, there is an awesome guide over at [DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2).
+
+### Mac or common Linux distributions
+To do so, on your *local* machine, run:
+#### Step 0
+```
+ls -la ~/.ssh
+```
+
+If the command lists files ending with `.pub` you likely already have a public SHH key. You may skip to step X.
+
+#### Step 1
+To create new directory to store the SHH key(s) and also to open it, run:
+```
+mkdir -p ~/.ssh && cd ~/.ssh
+```
+
+#### Step 2 
+To create the key, run:
+```
+ssh-keygen -t rsa
+```
+It will prompt you for name, and password for the files. Press `enter` three (3) times to skip these steps. The last lines of terminal output should look something like this:
+```
+The key fingerprint is:
+SHA256:1xeAtlZz+bMYhVGqNqCqR9eX4cYogot1OnxhjPhWHuo jussivesa@Jussis-MacBook-Pro-2.local
+The key's randomart image is:
++---[RSA 2048]----+
+|   .o  .=oo..    |
+|  .o o + B   .   |
+| .o++ o & o .    |
+| o=.Bo * = . .   |
+|.+.B ++ S . .    |
+|..= =. . = .     |
+| . +    . +      |
+|  E        .     |
+|                 |
++----[SHA256]-----+
+```
+
+
+#### Step X
+To copy the SHH key to the clipboard, run:
+```
+pbcopy < ~/.ssh/id_rsa.pub
+```
+
+#### Step 
+Access the remote server via the regular root user. It will depend on your remote server and the way it is setup, but the command should look something like:
+```
+ssh root@123.123.123.12
+```
+Afterwards, input the root user password. You should now be connected to the remote server.
+
+### Windows
+TODO
 
 ## Dev
 You may want to test the local dev-build with multiple devices. I would recommend great tool called `ngrok` to tunnel the `localhost:port` site as public address to be accessible from tablet, phone or another device.
@@ -26,7 +84,11 @@ and to tunnel
 `./ngrok http YOUR_PORT_HERE` where port is the port of where `create-reaction-app` is running, typically port 3000.
 
 ## Build
+
+### Windows
 Todo
+
+### Mac or common Linux distributions
 
 ## Contribute
 Any contributions are greatly appreciated. However, all pull request for the main Reaction Commerce should be made to the main Reaction Commerce repository at [GitHub](https://github.com/reactioncommerce/reaction). Besides that, pull requests for files listed in directory `imports/plugins/custom/create-reaction-app` are most welcomed to be made to this repo.
