@@ -1,0 +1,14 @@
+{
+    "remote": {
+        "connection": {
+            "ssh": "root@192.168.1.1 -"
+        },
+        "user": {
+            "name": "root",
+            "password": "password"
+        }
+    },
+    "local": {
+
+    }
+}
