@@ -203,6 +203,7 @@ TODO
 Any contributions are greatly appreciated. However, all pull request for the main Reaction Commerce should be made to the main Reaction Commerce repository at [GitHub](https://github.com/reactioncommerce/reaction). Besides that, pull requests for files listed in directory `imports/plugins/custom/create-reaction-app` are most welcomed to be made to this repo.
 
 
+# **!Note!** The install steps in the Reaction Docs are invalid and should not be mixed when using `create-reaction-app`
 
 # Reaction Commerce Docs from Reaction repository
 
