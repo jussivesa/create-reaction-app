@@ -15,11 +15,13 @@ create-reaction-app is a tool to quickly start a new realtime and reactive E-com
 ## Version
 Currently uses Reaction Commerce version 1.1.10. Output of `reaction --version`:
 ```
+create-reaction-app: 0.0.3
+create-reaction-app branch: development
 Node: 9.8.0
 NPM: 5.7.1
 Meteor Node: 8.9.4
 Meteor NPM: 5.6.0
-Reaction CLI: 0.29.0
+Reaction CLI: 0.12.0
 ```
 
 I will update the `create-reaction-app` with at least every minor update of Reaction Commerce and test that all of the features are working.
