@@ -1,7 +1,7 @@
 {
   "name": "create-reaction-app",
   "description": "Reaction Commerce made easy: Dev, Add Markets & Products, Customize to fit your Brand and Deploy with one script.",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "main.js",
   "directories": {
     "test": "tests"
