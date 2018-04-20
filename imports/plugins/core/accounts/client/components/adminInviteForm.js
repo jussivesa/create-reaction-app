@@ -187,7 +187,7 @@ class AdminInviteForm extends Component {
         <Components.CardHeader
           actAsExpander={true}
           data-i18n="accountsUI.info.addAdminUser"
-          title="Add Admin User"
+          title="Add Management User"
           id="accounts"
         />
         <Components.CardBody expandable={true}>
