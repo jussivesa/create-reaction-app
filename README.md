@@ -2,6 +2,10 @@
 
 create-reaction-app is a tool to quickly start a new realtime and reactive E-commerce JavaScript platform called **Reaction Commerce** with basic custom theme(s). It allows new Reaction Commerce users to easily understand the structure of custom themes and components. create-reaction-app also has powerful scripts to automate the development environment setup, and to deploy the e-commerce platform to your server fast.
 
+## Shameless plug
+Hi! I'm Jussi, the creator of the package. I'm a media engineer from Finland, Tampere.
+You can find me at [my website](https://vesa.co) or you may DM me at Twitter @jussivesa - So, let's be in touch!
+
 ## Key features
 - Base theme with ready-made examples of custom components and styles
 - Easy enough for Reaction Commerce beginners with advanced functionality for pros
@@ -13,7 +17,7 @@ create-reaction-app is a tool to quickly start a new realtime and reactive E-com
 - Thats it! Everything else is taken care of by the scripts 🙌
 
 ## Version
-Currently uses Reaction Commerce version 1.1.10. Output of `reaction --version`:
+Currently uses Reaction Commerce version 1.10.0. Output of `reaction --version`:
 ```
 create-reaction-app: 0.0.3
 create-reaction-app branch: development
