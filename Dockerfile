@@ -84,6 +84,11 @@ RUN mkdir -p "$APP_SOURCE_DIR" \
 RUN npm i -g github:jussivesa/reaction-cli#development
 # RUN npm i -g reaction-cli
 
+# Added jv
+RUN npm install -g increase-memory-limit
+
+RUN increase-memory-limit
+
 USER node
 
 ################################
@@ -102,8 +107,8 @@ WORKDIR $APP_SOURCE_DIR
 COPY /.create-reaction-app/dockerfile-test.sh .
 # Node flags for the Meteor build tool
 ONBUILD ARG TOOL_NODE_FLAGS
-ONBUILD ENV TOOL_NODE_FLAGS $TOOL_NODE_FLAGS
-
+# Edited (was ONBUILD ENV TOOL_NODE_FLAGS $TOOL_NODE_FLAGS)
+ONBUILD ENV TOOL_NODE_FLAGS 4096
 
 # defauls
 LABEL maintainer="Reaction Commerce <architecture@reactioncommerce.com>"
