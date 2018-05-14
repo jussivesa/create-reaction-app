@@ -1,1 +1,5 @@
-// Entrypoint for server files. This includes your meteor methods, publications, and other initialization scripts.
+import "../lib/collections/schemas";
+import "./publications";
+import "./init";
+import "./requestApproachFromStaff";
+import "./register.js";

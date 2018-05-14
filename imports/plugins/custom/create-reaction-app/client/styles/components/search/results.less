@@ -1,0 +1,33 @@
+  
+  /* -------------------------- Modal Container -------------------------- */  
+  .search-modal {
+    .product-grid-item {
+      
+      .item-content {
+        background-color: none;
+        transition: box-shadow 200ms linear;
+      }
+  
+      &:hover {
+        background: #fff;
+        z-index: 1;
+        height: 0;
+  
+        .item-content {
+          box-shadow: none;
+          background-color: @white;
+          margin-bottom: 50px;
+          transform: scale(1.05);
+          transform: translateY(-1px);
+        }
+  
+        .overlay-description {
+          height: auto;
+          opacity: 1.0;
+          background: #fff;
+          transition: all 0.2s ease-in-out;
+        }
+      }
+    }
+  }
+  

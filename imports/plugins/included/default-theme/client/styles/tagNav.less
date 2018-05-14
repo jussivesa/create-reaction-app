@@ -222,6 +222,16 @@
   position: relative;
 }
 
+// Flip icon
+.rui.tagnav.vertical .navbar-item.selected.has-dropdown > .rui.tag.link {
+  &:after, &:before {
+    transition: all 0.2s ease-in-out;
+  }
+}
+.rui.tagnav.vertical .navbar-item.selected.has-dropdown > .rui.tag.link:after {
+  transform: rotate(180deg);
+}
+
 .rui.tagnav.vertical .navbar-item.has-dropdown > .rui.tag.link:after {
   content: "\f107";
   font-family: "FontAwesome", "FontAwesomeFallback";
