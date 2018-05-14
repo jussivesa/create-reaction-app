@@ -1,0 +1,18 @@
+{
+    "vcs": {
+        "user": "youruser",
+        "password": "password",
+        "email": "you@domain.com"
+    },
+    "remote": {
+        "connection": {
+            "ssh": "you@192.168.1.1"
+        },
+        "user": {
+            "name": "root",
+            "password": "password"
+        }
+    },
+    "local": {
+    }
+}

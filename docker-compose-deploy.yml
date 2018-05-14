@@ -1,11 +1,11 @@
 # This is a demo docker-compose file.
-# Usage: docker-compose -f docker-compose-demo.yml up [-d]
+# Usage: docker-compose -f docker-compose-deploy.yml up [-d]
 
 version: '3.4'
 
 services:
   reaction:
-    image: reactioncommerce/reaction:latest
+    image: create-reaction-app-0.0.3
     depends_on:
       - mongo
     ports:

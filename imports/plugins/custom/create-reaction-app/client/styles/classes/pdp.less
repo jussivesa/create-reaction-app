@@ -1,0 +1,92 @@
+.pdp-container {
+  background-color: #F6f3f5;
+
+  .rui.item.variable {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .pdp.price-range,
+    .pdp.field.title {
+      margin: 0;
+      line-height: inherit;
+      font-size: 24px;
+      font-weight: 300;
+    }
+
+    .pdp.field.vendor {
+      margin-top: 15px;
+    }
+  }
+
+  .rui.social-buttons {
+    margin-top: 20px;
+    a {
+      color: #a09e9f;
+    }
+  }
+
+  .pdp.add-to-cart input[type=number] {
+    background-color: rgb(225, 174, 85);
+    border-color: rgb(225, 174, 85);
+    padding-left: 0;
+    padding-right: 0;
+    -moz-appearance: textfield;
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+
+  .spin-buttons {
+    color: white;
+    background-color: rgb(225, 174, 85);
+    border-color: rgb(225, 174, 85);
+    display: flex;
+    flex-direction: column;
+    padding-right: 5px;
+    i {
+      font-size: 22px;
+      line-height: 2rem;
+      height: 50%;
+      &:hover {
+        cursor: hand;
+      }
+    }
+  }
+
+  .pdp.add-to-cart button {
+    border: solid 3px rgb(225, 174, 85);
+    -moz-border-radius-topright: 3px;
+    -moz-border-radius-bottomright: 3px;
+    background-color: rgb(225, 174, 85);
+    color: #fff;
+    text-transform: uppercase;
+  }
+
+  .variant-detail:hover {
+    border: 1px solid rgb(255, 197, 98);
+    box-shadow: 0 0 0 1px rgb(225, 174, 85);
+  }
+
+  .variant-detail-selected {
+    border: 1px solid rgb(225, 174, 85);
+    box-shadow: 0 0 0 1px rgb(225, 174, 85);
+    color: #4AAAD9;
+  }
+
+  .variant-select-option {
+    /*max-width: 62px;*/
+  }
+}
+
+html:not(.rtl) .pdp .currency-symbol {
+  margin-right: 0;
+}
+
+.pdp-filler img {
+  max-height: 500px;
+  object-fit: cover;
+  width: 100%;
+}

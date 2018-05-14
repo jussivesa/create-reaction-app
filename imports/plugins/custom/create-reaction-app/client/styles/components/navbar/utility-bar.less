@@ -1,0 +1,52 @@
+.footer-utility-bar-mobile {
+    background-color: rgb(73, 117, 129) !important;
+    @media screen and (max-width: @screen-xs-max) {
+        display: flex !important;
+
+        &.utility-bar-hashtag, &.utility-bar-news {
+            display: none;
+        }
+    }
+}
+
+.utility-bar {
+    background-color: rgb(73, 117, 129) !important;
+    display: flex;
+    height: 35px;
+    justify-content: space-between;
+    letter-spacing: 0.5px;
+
+    .utility-bar__main {
+        &.rui.navbar {
+            height: 35px;
+        }
+    }
+  
+    
+    @media screen and (max-width: @screen-xs-max) {
+        display: flex !important;
+
+        .utility-bar.utility-bar-hashtag, .utility-bar.utility-bar-news {
+            display: none;
+        }
+    }
+
+    .languages, .accounts {
+        display: none;
+      }
+  }
+  
+  .utility-bar-hashtag {
+    font-size: 12px;
+    font-weight: bold;
+    padding: 10px 0 0 29px;
+    text-transform: uppercase;
+  }
+  
+  .utility-bar-news {
+    font-size: 12px;
+    font-weight: 600;
+    height: 16px;
+    padding-top: 9px;
+    text-align: center;
+  }
