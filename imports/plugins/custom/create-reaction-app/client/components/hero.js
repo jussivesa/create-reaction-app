@@ -10,6 +10,7 @@ class Hero extends React.Component {
   constructor(...args) {
     super(...args);
     this.tagRouteSlug = Reaction.Router.getParam("slug");
+    console.warn('hero here');
   }
 
   heroClicked = () => {
@@ -23,10 +24,14 @@ class Hero extends React.Component {
 
   renderHero() {
     if (this.tagRouteSlug && this.props.tags) {
+      console.warn('hero', this.props.tags);
       // Tag route
       const tag = this.props.tags.find((x) => x.slug === this.tagRouteSlug);
+      if (!tag) {
+        return <div></div>;
+      }
       return (
-        <div className="cat-hero" style={{ backgroundImage: `url('/plugins/create-reaction-app/${tag ? tag.catHeroImageUrl : 'no-tag'}')` }} >
+        <div className="cat-hero" style={{ backgroundImage: `url('/resources/${tag.catHeroImageUrl}')` }} >
           <div className="cat-hero-wrapper">
             <div className="cat-hero-slogan">
               <Components.Translation defaultValue={"Lorem ipsum"} i18nKey={tag.catHeroSloganI18nKey} />
@@ -57,7 +62,7 @@ class Hero extends React.Component {
     return (
       <div className={"cat-tile col-xs-12"} key={tag._id}>
         <a href={`/tag/${tag.slug}`} onClick={this.handleClick}>
-          <img alt={tag.name} src={`/plugins/create-reaction-app/${tag.catTileImageUrl}`} />
+          <img alt={tag.name} src={`/resources/${tag.catTileImageUrl}`} />
           <span className={"category"}>{tag ? tag.name : 'no-tag'}</span>
         </a>
       </div>
@@ -130,42 +135,50 @@ class Hero extends React.Component {
   }
 
   renderWordOfTheDay() {
-    return (
-      <div className={"word-of-the-day"}>
-        <div className={"word-of-the-day-header"}>
-          <Components.Translation defaultValue={"#MADEINTHESUNSHINE"} i18nKey={"wordOfTheDayHeader"} />
+    if (Reaction.Router.getRouteName() === 'index') {
+      return (
+        <div className={"word-of-the-day"}>
+          <div className={"word-of-the-day-header"}>
+            <Components.Translation defaultValue={"#VASIOS"} i18nKey={"wordOfTheDayHeader"} />
+          </div>
+          <div className={"word-of-the-day-text"}>
+            <a href="https://www.instagram.com/#vasios" title="Instagram">
+              <Components.Translation defaultValue={"Shop your favorites on our Instagram feed."} i18nKey={"wordOfTheDayText"} />
+            </a>
+          </div>
         </div>
-        <div className={"word-of-the-day-text"}>
-          <a href="https://www.instagram.com/reactioncommerce/" title="Instagram">
-            <Components.Translation defaultValue={"Shop your favorites on our Instagram feed."} i18nKey={"wordOfTheDayText"} />
-          </a>
-        </div>
-      </div>
-    );
+      );
+    } else {
+      return <div></div>;
+    }
   }
 
   renderImageGallery() {
-    return (
-      <div className="row image-gallery">
-        <div className="col-xs-12 col-sm-5ths col-sm-push-2">
-          <a href={"https://www.instagram.com/reactioncommerce/"} alt={"instagram"}>
-            <img alt="Instagram" src={"/plugins/create-reaction-app/palms.png"} />
-          </a>
+    if (Reaction.Router.getRouteName() === 'index') {
+      return (
+        <div className="row image-gallery">
+          <div className="col-xs-12 col-sm-5ths col-sm-push-2">
+            <a href={"https://www.instagram.com/reactioncommerce/"} alt={"instagram"}>
+              <img alt="Instagram" src={"/resources/palms.png"} />
+            </a>
+          </div>
+          <div className="col-xs-6 col-sm-5ths col-sm-pull-1">
+            <img alt="Frames" src={"/resources/frames.png"} />
+          </div>
+          <div className="col-xs-6 col-sm-5ths col-sm-pull-1">
+            <img alt="Box" src={"/resources/box.png"} />
+          </div>
+          <div className="col-xs-6 col-sm-5ths">
+            <img alt="Sticker" src={"/resources/sticker.png"} />
+          </div>
+          <div className="col-xs-6 col-sm-5ths">
+            <img alt="T-Shirt" src={"/resources/t-shirt.png"} />
+          </div>
         </div>
-        <div className="col-xs-6 col-sm-5ths col-sm-pull-1">
-          <img alt="Frames" src={"/plugins/create-reaction-app/frames.png"} />
-        </div>
-        <div className="col-xs-6 col-sm-5ths col-sm-pull-1">
-          <img alt="Box" src={"/plugins/create-reaction-app/box.png"} />
-        </div>
-        <div className="col-xs-6 col-sm-5ths">
-          <img alt="Sticker" src={"/plugins/create-reaction-app/sticker.png"} />
-        </div>
-        <div className="col-xs-6 col-sm-5ths">
-          <img alt="T-Shirt" src={"/plugins/create-reaction-app/t-shirt.png"} />
-        </div>
-      </div>
-    );
+      );
+    } else {
+      return null;
+    }
   }
 }
 

@@ -33,7 +33,12 @@
   
   html .rui.navbar {
     letter-spacing: 0.6px;
+    background-color: inherit;
     .languages {
+      &:hover {
+        background-color: inherit;
+      }
+      background-color: inherit;
      /* @media screen and (max-width: 767px) {
         display: none;
       }*/
@@ -41,6 +46,7 @@
       .dropdown-toggle {
         padding: 0;
         .btn {
+          color: white;
           font-size: 12px;
         }
         .fa {
@@ -63,6 +69,9 @@
       &:hover {
         border-color: inherit;
         background-color: inherit;
+      }
+      .btn {
+        color: white;
       }
       .accounts-dropdown {
         height: initial;
@@ -140,6 +149,7 @@
         }
         .navbar-items {
           padding: 0;
+          overflow-x: hidden;
           .navbar-item {
             border-bottom: 1px solid lightgrey;
             padding: 0;
@@ -265,6 +275,10 @@
     font-weight: bold;
     padding: 10px 0 0 29px;
     text-transform: uppercase;
+
+    & > a, a {
+      color: inherit !important;
+    }
   }
   
   .utility-bar-news {

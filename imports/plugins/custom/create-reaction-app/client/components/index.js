@@ -1,11 +1,14 @@
 import "./cartIcon";
 import "./languageDropdown";
+import "./mainDropdown";
 import "./header";
 import "./footer";
 import "./hero";
+import "./tags";
 import "./navBar";
 import "./utilityBar";
 import "./product-admin";
 import "./similar-products";
 import "./core";
+import "./product-detail-simple";
 import "./product-variant";

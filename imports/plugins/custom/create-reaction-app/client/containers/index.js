@@ -4,4 +4,3 @@ import "./cartIcon";
 import "./similar-products";
 import "./product-variant";
 import "./core";
-

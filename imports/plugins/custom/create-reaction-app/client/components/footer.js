@@ -98,7 +98,7 @@ class SwagShopFooter extends React.Component {
 
   renderEmailForm() {
     return (
-      <div className="col-xs-12 col-sm-4 col-lg-6 get-in-contact">
+      <div className="col-xs-12 col-sm-4 col-lg-4 get-in-contact">
         <div className="email-form">
           <div className="email-form-header">We love memories</div>
           <div className="email-form-subheader">Pumped? Join the family</div>
@@ -126,7 +126,7 @@ class SwagShopFooter extends React.Component {
 
   renderNavigation() {
     return (
-      <div className="col-xs-12 col-sm-4 col-lg-offset-1 col-lg-1 navigation">
+      <div className="col-xs-12 col-sm-4 col-lg-3 navigation">
         <Card
           name="shop"
           onExpand={this.onExpand}
@@ -153,7 +153,7 @@ class SwagShopFooter extends React.Component {
 
   renderCompanyLinks() {
     return (
-      <div className="col-xs-12 col-sm-2 col-lg-1 company">
+      <div className="col-xs-12 col-sm-2 col-lg-2 company">
         <Card
           name="company"
           onExpand={this.onExpand}

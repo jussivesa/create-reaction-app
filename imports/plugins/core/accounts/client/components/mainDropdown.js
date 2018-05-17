@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { Components } from "@reactioncommerce/reaction-components";
+import { registerComponent, Components } from "@reactioncommerce/reaction-components";
 import { Reaction } from "/client/api";
 import Login from "./login";
 
@@ -17,7 +17,7 @@ const menuStyle = {
   minHeight: 50
 };
 
-class MainDropdown extends Component {
+class MyMainDropdown extends Component {
   static propTypes = {
     adminShortcuts: PropTypes.object,
     currentAccount: PropTypes.oneOfType([PropTypes.bool, PropTypes.object]),
@@ -133,4 +133,6 @@ class MainDropdown extends Component {
   }
 }
 
-export default MainDropdown;
+registerComponent("MyMainDropdown", MyMainDropdown);
+
+export default MyMainDropdown;

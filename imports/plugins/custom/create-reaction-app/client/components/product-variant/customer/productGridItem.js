@@ -57,7 +57,7 @@ class ProductGridItem extends ProductGridItemCore {
             onClick={this.handleClick}
           >
             <div className="product-primary-images">
-              {this.props.showFeaturedLabel && this.renderFeaturedProductLabel()}
+              {this.renderFeaturedProductLabel()}
               {this.renderMedia()}
             </div>
             {this.renderAdditionalMedia()}

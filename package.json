@@ -108,7 +108,7 @@
     "react-taco-table": "^0.5.1",
     "react-tether": "^0.6.1",
     "react-textarea-autosize": "^5.2.1",
-    "reaction-cli": "github:jussivesa/reaction-cli#development",
+    "reaction-cli": "git+https://github.com/jussivesa/reaction-cli.git",
     "recompose": "^0.26.0",
     "shallowequal": "^1.0.2",
     "sharp": "^0.19.0",

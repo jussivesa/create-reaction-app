@@ -17,6 +17,7 @@ class ProductGrid extends ProductGridCore {
   constructor(...args) {
     super(...args);
     this.tagRouteSlug = Reaction.Router.getParam("slug");
+    console.warn('productGrid here');
   }
 
   heroClicked = () => {
@@ -24,12 +25,15 @@ class ProductGrid extends ProductGridCore {
   }
 
   renderHero() {
-    // TODO import { Tags } from "/lib/collections";
     if (this.tagRouteSlug && this.props.tags) {
+      console.warn('productGrid', this.props.tags);
       // Tag route
       const tag = this.props.tags.find((x) => x.slug === this.tagRouteSlug);
+      if (!tag) {
+        return <div></div>;
+      }
       return (
-        <div className="cat-hero" style={{ backgroundImage: `url('/plugins/create-reaction-app/public/${tag.catHeroImageUrl}')` }} >
+        <div className="cat-hero" style={{ backgroundImage: `url('/resources/${tag.catHeroImageUrl}')` }} >
           <div className="cat-hero-wrapper">
             <div className="cat-hero-slogan">
               <Components.Translation defaultValue={"Lorem ipsum"} i18nKey={tag.catHeroSloganI18nKey} />
@@ -66,14 +70,17 @@ class ProductGrid extends ProductGridCore {
 
   renderProductGridItems() {
     const { products } = this.props;
+    console.log(products);
     if (Array.isArray(products)) {
       // Render image only for tag route
       if (this.tagRouteSlug) {
         const insertAt = (products.length && Math.ceil(products.length / 2)) || 0;
-        products.splice(insertAt, 0, { src: "/plugins/create-reaction-app/public/mountain-road.jpg" });
+        products.splice(insertAt, 0, { src: "/resources/mountain-road.jpg" });
       }
       const currentTag = ReactionProduct.getTag();
+      console.log(currentTag);
       return products.map((product, index) => {
+        console.log(product);
         if (product.src) {
           return (
             <li key={index} className={"product-grid-item product-medium"}>
@@ -107,7 +114,7 @@ class ProductGrid extends ProductGridCore {
     return (
       <div className={"cat-tile col-xs-12"} key={tag._id}>
         <a href={`/tag/${tag.slug}`} onClick={this.handleClick}>
-          <img alt={tag.name} src={`/plugins/create-reaction-app/public/${tag.catTileImageUrl}`} />
+          <img alt={tag.name} src={`/resources/${tag.catTileImageUrl}`} />
           <span className={"category"}>{tag.name}</span>
         </a>
       </div>
@@ -162,7 +169,7 @@ class ProductGrid extends ProductGridCore {
     return (
       <div>
         {this.renderHero()}
-        {!this.tagRouteSlug && this.props.tags && this.renderCategories()}
+        {/* !this.tagRouteSlug && this.props.tags && this.renderCategories() */}
         <div className="container-main">
           {!this.tagRouteSlug &&
           <div className="row">
@@ -186,10 +193,10 @@ class ProductGrid extends ProductGridCore {
     return (
       <div className={"word-of-the-day"}>
         <div className={"word-of-the-day-header"}>
-          <Components.Translation defaultValue={"#MADEINTHESUNSHINE"} i18nKey={"wordOfTheDayHeader"} />
+          <Components.Translation defaultValue={"#VASIOS"} i18nKey={"wordOfTheDayHeader"} />
         </div>
         <div className={"word-of-the-day-text"}>
-          <a href="https://www.instagram.com/reactioncommerce/" title="Instagram">
+          <a href="https://www.instagram.com/#vasios" title="Instagram">
             <Components.Translation defaultValue={"Shop your favorites on our Instagram feed."} i18nKey={"wordOfTheDayText"} />
           </a>
         </div>
@@ -202,20 +209,20 @@ class ProductGrid extends ProductGridCore {
       <div className="row image-gallery">
         <div className="col-xs-12 col-sm-5ths col-sm-push-2">
           <a href={"https://www.instagram.com/reactioncommerce/"} alt={"instagram"}>
-            <img alt="Instagram" src={"/plugins/create-reaction-app/public/palms.png"} />
+            <img alt="Instagram" src={"/resources/palms.png"} />
           </a>
         </div>
         <div className="col-xs-6 col-sm-5ths col-sm-pull-1">
-          <img alt="Frames" src={"/plugins/create-reaction-app/public/frames.png"} />
+          <img alt="Frames" src={"/resources/frames.png"} />
         </div>
         <div className="col-xs-6 col-sm-5ths col-sm-pull-1">
-          <img alt="Box" src={"/plugins/create-reaction-app/public/box.png"} />
+          <img alt="Box" src={"/resources/box.png"} />
         </div>
         <div className="col-xs-6 col-sm-5ths">
-          <img alt="Sticker" src={"/plugins/create-reaction-app/public/sticker.png"} />
+          <img alt="Sticker" src={"/resources/sticker.png"} />
         </div>
         <div className="col-xs-6 col-sm-5ths">
-          <img alt="T-Shirt" src={"/plugins/create-reaction-app/public/t-shirt.png"} />
+          <img alt="T-Shirt" src={"/resources/t-shirt.png"} />
         </div>
       </div>
     );

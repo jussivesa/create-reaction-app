@@ -1,8 +1,13 @@
 import React from "react";
 import { Components } from "@reactioncommerce/reaction-components";
+import { Reaction } from "/client/api/index";
 import _ from "lodash";
 
 const UtilityBar = (props, context) => {
+  handleClick = (event) => {
+    event.preventDefault();
+    Reaction.Router.go("/");
+  }
   const visibility = {
     hamburger: false,
     brand: false,
@@ -26,7 +31,7 @@ const UtilityBar = (props, context) => {
   ]
   return (
     <div className={"utility-bar"}>
-      <div className={"utility-bar-hashtag"}>{"#VASIOS"}</div>
+      <div className={"utility-bar-hashtag"}><a href={`/`} onClick={this.handleClick}>{"#VASIOS"}</a></div>
       <div className={"utility-bar-news"}>
         <p>{_.sample(greetings)}</p>
       </div>
