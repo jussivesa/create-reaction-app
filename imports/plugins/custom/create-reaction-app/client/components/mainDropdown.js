@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { Components } from "@reactioncommerce/reaction-components";
+import { replaceComponent, getHOCs } from "@reactioncommerce/reaction-components";
 import { Reaction } from "/client/api";
-import Login from "./login";
+import Login from "../../../../core/accounts/client";
 
 const iconStyle = {
     margin: "10px 10px 10px 6px",
@@ -30,7 +31,7 @@ class MainDropdown extends Component {
     buttonElement() {
         const { userImage, userName } = this.props;
         return (
-            <Components.Button containerStyle={{ fontWeight: "normal", letterSpacing: 0.8 }}>
+            <Components.Button containerStyle={{ color: 'white', fontWeight: "normal", letterSpacing: 0.8 }}>
                 <span className="main-dropdown-userImage">{userImage}</span>
                 <span className="main-dropdown-userName">{userName}</span>&nbsp;
         <Components.Icon
@@ -134,5 +135,6 @@ class MainDropdown extends Component {
 }
 
 
+replaceComponent("MainDropdown", MainDropdown, getHOCs("MainDropdown"));
 
 export default MainDropdown;

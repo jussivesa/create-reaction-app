@@ -110,7 +110,7 @@ class SwagShopFooter extends React.Component {
               onBlur={this.handleFieldBlur}
               onChange={this.handleChange}
               onReturnKeyDown={this.handleFieldBlur}
-              placeholder="You're email"
+              placeholder="Your email"
               ref="emailInput"
               value={this.state.email}
               validation={this.state.validationStatus}

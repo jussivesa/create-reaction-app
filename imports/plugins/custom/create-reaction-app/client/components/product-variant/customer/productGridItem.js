@@ -1,8 +1,7 @@
 import React from "react";
 import { PropTypes } from "prop-types";
-import { replaceComponent } from "@reactioncommerce/reaction-components";
+import { replaceComponent, registerComponent } from "@reactioncommerce/reaction-components";
 import ProductGridItemCore from "/imports/plugins/included/product-variant/components/customer/productGridItem";
-
 
 class ProductGridItem extends ProductGridItemCore {
   static propTypes = {
@@ -16,12 +15,11 @@ class ProductGridItem extends ProductGridItemCore {
 
   static labelColorPalette = [
     "#2899D3", // blue
-    "#40e0d0", // turquoise
-    "#F2542F" // orange
+    "#497581", // turquoise
+    "#E1AE55" // orange-ish
   ];
 
   renderFeaturedProductLabel() {
-    console.warn('renderFeaturedProductLabel', this.props.product);
     const { featuredProductLabel } = this.props.product;
     let bgColor;
     if (featuredProductLabel) {
@@ -70,5 +68,8 @@ class ProductGridItem extends ProductGridItemCore {
     );
   }
 }
+
+registerComponent("ProductGridItemCustomer", ProductGridItem);
+// replaceComponent("ProductGridItemCustomer", ProductGridItem);
 
 export default ProductGridItem;

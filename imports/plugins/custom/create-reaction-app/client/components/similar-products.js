@@ -32,7 +32,7 @@ class SimilarProducts extends Component {
           </div>
           <div className="products-scroll">
             {products.map((product) =>
-              <Components.ProductGridItem
+              <Components.ProductGridItemCustomer
                 key={product._id}
                 product={product}
                 position={(product.positions && product.positions[currentTag]) || {}}

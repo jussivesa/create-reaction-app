@@ -10,7 +10,6 @@ class Hero extends React.Component {
   constructor(...args) {
     super(...args);
     this.tagRouteSlug = Reaction.Router.getParam("slug");
-    console.warn('hero here');
   }
 
   heroClicked = () => {
@@ -24,7 +23,6 @@ class Hero extends React.Component {
 
   renderHero() {
     if (this.tagRouteSlug && this.props.tags) {
-      console.warn('hero', this.props.tags);
       // Tag route
       const tag = this.props.tags.find((x) => x.slug === this.tagRouteSlug);
       if (!tag) {
@@ -114,24 +112,28 @@ class Hero extends React.Component {
   }
 
   render() {
-    return (
-      <div>
-        {Reaction.Router.getRouteName() === 'index' && this.renderHero()}
-        {Reaction.Router.getRouteName() === 'index' && !this.tagRouteSlug && this.props.tags && this.renderCategories()}
-        <div className="container-main">
-          {!this.tagRouteSlug &&
-          <div className="row">
-            <div className="text-center">
-              <h3 className="products-we-love-header">
-                <Components.Translation defaultValue="Products We Love" i18nKey="productsWeLove" />
-              </h3>
-            </div>
-          </div>}
+    if (Reaction.Router.getRouteName() === 'index') {
+      return (
+        <div>
+          {this.renderHero()}
+          {!this.tagRouteSlug && this.props.tags && this.renderCategories()}
+          <div className="container-main">
+            {!this.tagRouteSlug &&
+              <div className="row">
+                <div className="text-center">
+                  <h3 className="products-we-love-header">
+                    <Components.Translation defaultValue="Products We Love" i18nKey="productsWeLove" />
+                  </h3>
+                </div>
+              </div>}
+          </div>
+          {this.renderWordOfTheDay()}
+          {this.renderImageGallery()}
         </div>
-        {this.renderWordOfTheDay()}
-        {this.renderImageGallery()}
-      </div>
-    );
+      );
+    } else {
+      return <div></div>
+    }
   }
 
   renderWordOfTheDay() {

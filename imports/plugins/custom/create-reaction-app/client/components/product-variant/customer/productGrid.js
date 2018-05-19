@@ -17,7 +17,6 @@ class ProductGrid extends ProductGridCore {
   constructor(...args) {
     super(...args);
     this.tagRouteSlug = Reaction.Router.getParam("slug");
-    console.warn('productGrid here');
   }
 
   heroClicked = () => {
@@ -25,13 +24,9 @@ class ProductGrid extends ProductGridCore {
   }
 
   renderHero() {
-    if (this.tagRouteSlug && this.props.tags) {
-      console.warn('productGrid', this.props.tags);
+    if (this.tagRouteSlug) {
       // Tag route
       const tag = this.props.tags.find((x) => x.slug === this.tagRouteSlug);
-      if (!tag) {
-        return <div></div>;
-      }
       return (
         <div className="cat-hero" style={{ backgroundImage: `url('/resources/${tag.catHeroImageUrl}')` }} >
           <div className="cat-hero-wrapper">
@@ -70,7 +65,6 @@ class ProductGrid extends ProductGridCore {
 
   renderProductGridItems() {
     const { products } = this.props;
-    console.log(products);
     if (Array.isArray(products)) {
       // Render image only for tag route
       if (this.tagRouteSlug) {
@@ -78,9 +72,7 @@ class ProductGrid extends ProductGridCore {
         products.splice(insertAt, 0, { src: "/resources/mountain-road.jpg" });
       }
       const currentTag = ReactionProduct.getTag();
-      console.log(currentTag);
       return products.map((product, index) => {
-        console.log(product);
         if (product.src) {
           return (
             <li key={index} className={"product-grid-item product-medium"}>
@@ -89,7 +81,7 @@ class ProductGrid extends ProductGridCore {
           );
         }
         return (
-          <Components.ProductGridItem
+          <Components.ProductGridItemCustomer
             key={product._id}
             product={product}
             position={(product.positions && product.positions[currentTag]) || {}}
@@ -169,7 +161,7 @@ class ProductGrid extends ProductGridCore {
     return (
       <div>
         {this.renderHero()}
-        {/* !this.tagRouteSlug && this.props.tags && this.renderCategories() */}
+        {!this.tagRouteSlug && this.renderCategories()}
         <div className="container-main">
           {!this.tagRouteSlug &&
           <div className="row">
@@ -182,6 +174,8 @@ class ProductGrid extends ProductGridCore {
           <ul className="product-grid-list list-unstyled" id="product-grid-list">
             {this.renderProductGridItems()}
           </ul>
+          {this.renderLoadingSpinner()}
+          {this.renderNotFound()}
         </div>
         {this.renderWordOfTheDay()}
         {this.renderImageGallery()}
