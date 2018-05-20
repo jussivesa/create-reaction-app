@@ -28,13 +28,13 @@ class ProductGrid extends ProductGridCore {
       // Tag route
       const tag = this.props.tags.find((x) => x.slug === this.tagRouteSlug);
       return (
-        <div className="cat-hero" style={{ backgroundImage: `url('/resources/${tag.catHeroImageUrl}')` }} >
+        <div className="cat-hero" style={{ backgroundImage: `url('/resources/${tag ? tag.catHeroImageUrl : 'placeholder.jpg'}')` }} >
           <div className="cat-hero-wrapper">
             <div className="cat-hero-slogan">
-              <Components.Translation defaultValue={"Lorem ipsum"} i18nKey={tag.catHeroSloganI18nKey} />
+              <Components.Translation defaultValue={"Lorem ipsum"} i18nKey={tag ? tag.catHeroSloganI18nKey : ''} />
             </div>
             <div className="cat-hero-huge-text">
-              <Components.Translation defaultValue={"Nuro laudio vid pastum"} i18nKey={tag.catHeroTitleI18nKey} />
+              <Components.Translation defaultValue={"Nuro laudio vid pastum"} i18nKey={tag ? tag.catHeroTitleI18nKey : ''} />
             </div>
           </div>
         </div>
