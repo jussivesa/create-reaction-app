@@ -2,7 +2,7 @@ import { Reaction } from "/server/api";
 
 function changeProductDetailPageLayout() {
   // Customize default productDetailSimple page's layout
-  const customPdpLayout = require("../private/data/productDetailSimple");
+  const customPdpLayout = require("../private/data/ProductDetailSimple");
   Reaction.registerTemplate({
     name: "productDetailSimple",
     title: "Product Detail Simple Layout",
