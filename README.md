@@ -4,7 +4,7 @@ create-reaction-app is a tool to quickly start a new realtime and reactive E-com
 
 ## Shameless plug
 Hi! I'm Jussi, the creator of the package. I'm a media engineer from Finland, Tampere.
-You can find me at [my website](https://vesa.co) or you may DM me at Twitter @jussivesa - So, let's be in touch!
+You can find me at [my website](https://jussivesa.com/?ref=create-reaction-app) or you may DM me at Twitter @jussivesa - So, let's be in touch!
 
 ## Key features
 - Base theme with ready-made examples of custom components and styles
